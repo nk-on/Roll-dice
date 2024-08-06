@@ -14,11 +14,11 @@ function genereteRandomNum() {
   const randomNum = Math.floor(Math.random() * (max - min) + min);
   return diceIcons[randomNum];
 }
-function addDiceRoll() {
+function addDiceIcon() {
   const dice = genereteRandomNum();
   diceIcon.textContent = dice;
   diceIcon.classList.add('roll-animation');
 }
-rollButton.addEventListener("click", addDiceRoll);
+rollButton.addEventListener("click", addDiceIcon);
 //App should be able to generete 6 random numbers
 //there should be objects with numbers and according dice icons
