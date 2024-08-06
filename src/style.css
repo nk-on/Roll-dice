@@ -1,33 +1,52 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-:root{
-    --clr-blue:#1ecbe1;
-    --clr-white:#fff;
+:root {
+  --clr-blue: #1ecbe1;
+  --clr-white: #fff;
+  --clr-gray:#d1dee4;
 }
-body{
-    font-family:  Arial, Helvetica, sans-serif;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+.wrapper {
+  margin-top: 10vh;
+  display: grid;
+  gap: 10px;
+  text-align: center;
+}
+.wrapper .dice-icon {
+  font-size: 56px;
+}
+.wrapper .roll-button {
+  background-color: var(--clr-blue);
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  width: 50%;
+  margin: 0 auto;
+  color: var(--clr-white);
+  cursor: pointer;
+}
+.roll-animation {
+  animation-name: roll;
+  animation-duration: 2s;
+}
+.Dice-roll-result-container{
+    background-color: var(--clr-gray);
     display: flex;
-    justify-content: center;
+    width: 40%;
 }
-.wrapper{
-    margin-top: 10vh;
-    display: grid;
-    gap:10px;
-    text-align: center;
-}
-.wrapper .dice-icon{
-    font-size: 56px;
-}
-.wrapper .roll-button{
-    background-color: var(--clr-blue);
-    padding: 20px;
-    border: none;
-    border-radius: 10px;
-    width: 50%;
-    margin: 0 auto;
-    color:var(--clr-white);
-    cursor: pointer;
+@keyframes roll {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+
+  100% {
+    transform: rotateY(720deg) rotateX(720deg);
+  }
 }
