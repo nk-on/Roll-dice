@@ -55,5 +55,3 @@ function addDiceIcon() {
 }
 rollButton.addEventListener("click", addDiceIcon);
 displayHistory();
-//App should be able to generete 6 random numbers
-//there should be objects with numbers and according dice icons
