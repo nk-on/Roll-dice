@@ -39,6 +39,11 @@ function displayHistory() {
     container.appendChild(resultContainer);
   });
 }
+function removeAnimation() {
+  diceIcon.addEventListener("animationend", () => {
+    diceIcon.classList.remove("roll-animation");
+  });
+}
 function addDiceIcon() {
   const dice = genereteRandomNum();
   diceIcon.textContent = dice;
@@ -46,6 +51,7 @@ function addDiceIcon() {
   totalRolls++;
   historyLocalStorage(dice);
   displayHistory();
+  removeAnimation();
 }
 rollButton.addEventListener("click", addDiceIcon);
 displayHistory();
