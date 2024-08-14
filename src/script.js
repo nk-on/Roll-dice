@@ -16,11 +16,15 @@ function genereteDiceIcon() {
   const randomNum = Math.floor(Math.random() * (max - min) + min);
   return diceIcons[randomNum];
 }
+/*ushing roll results in particular diceIcon and totalRoll amount inside rollHistory array also*/
 function historyLocalStorage(diceIcon) {
   rollHistory.push({ diceIcon, totalRolls });
   localStorage.setItem("rollResult", JSON.stringify(rollHistory));
-  localStorage.setItem("totalRolls",totalRolls);
+  localStorage.setItem("totalRolls", totalRolls);
 }
+/*function which displays history of previous dice rolls by looping through diceHistory array 
+  which tracks results of every dice roll
+*/
 function displayHistory() {
   if (container.innerHTML.length > 1) {
     container.innerHTML = "";
