@@ -1,7 +1,6 @@
 const rollButton = document.querySelector("[data-roll]");
 const container = document.querySelector("[data-container]");
 const diceIcon = document.querySelector("[data-dice-icon]");
-console.log(localStorage.getItem("totalRolls"))
 let totalRolls = localStorage.getItem("totalRolls") || 0;
 const rollHistory = JSON.parse(localStorage.getItem("rollResult")) || [];
 function genereteRandomNum() {
