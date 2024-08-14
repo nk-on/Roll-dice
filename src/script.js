@@ -3,7 +3,7 @@ const container = document.querySelector("[data-container]");
 const diceIcon = document.querySelector("[data-dice-icon]");
 let totalRolls = localStorage.getItem("totalRolls") || 0;
 const rollHistory = JSON.parse(localStorage.getItem("rollResult")) || [];
-function genereteRandomNum() {
+function genereteDiceIcon() {
   const diceIcons = {
     1: "⚀",
     2: "⚁",
@@ -46,7 +46,7 @@ function removeAnimation() {
   });
 }
 function addDiceIcon() {
-  const dice = genereteRandomNum();
+  const dice = genereteDiceIcon();
   diceIcon.textContent = dice;
   diceIcon.classList.add("roll-animation");
   totalRolls++;
